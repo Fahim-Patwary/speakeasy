@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SpeakEasy English Learning</title>
+<style>
+:root{--bg:#f5f7ff;--card:#fff;--ink:#172033;--muted:#64748b;--brand:#4f46e5;--brand2:#3730a3;--line:#e2e8f0;--good:#15803d;--bad:#b91c1c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:11px;padding:11px 15px;background:#eef2ff;color:var(--brand2);font-weight:700}button:hover{filter:brightness(.97)}button.primary,.tab.active{background:var(--brand);color:white}
+header{background:linear-gradient(125deg,#172554,#4f46e5);color:white;padding:25px 18px 46px}.wrap{max-width:1100px;margin:auto}.brand{font-size:21px;font-weight:850;letter-spacing:.3px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.chip{font-size:12px;border:1px solid #ffffff60;background:#ffffff18;padding:7px 11px;border-radius:99px}h1{font-size:clamp(29px,5vw,44px);line-height:1.08;margin:30px 0 10px}header p{color:#e0e7ff;line-height:1.6;max-width:650px;margin:0}
+main{max-width:1100px;margin:-22px auto 40px;padding:0 15px}.tabs{display:flex;gap:7px;flex-wrap:wrap;padding:8px;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 28px #1725540c}.tab{background:transparent;color:#334155}
+.grid{display:grid;grid-template-columns:1.35fr .8fr;gap:16px;margin-top:17px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 4px 18px #0f172a07}.hide{display:none!important}
+h2{font-size:21px;margin:0 0 8px}h3{font-size:17px;margin:0 0 8px}.muted{color:var(--muted);line-height:1.55}.eyebrow{display:inline-block;background:#eef2ff;color:var(--brand2);font-size:11px;font-weight:800;letter-spacing:.7px;padding:6px 9px;border-radius:99px}
+.big{font-size:32px;font-weight:850;color:#172554;margin:18px 0 5px}.meaning{font-size:16px}.example{background:#f8fafc;border:1px solid #edf0f7;border-radius:13px;padding:14px;line-height:1.6;margin:15px 0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}.stat{background:#f8fafc;padding:14px;border-radius:13px}.num{font-size:25px;font-weight:850;color:#172554}.progress{height:8px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin:9px 0}.bar{height:100%;background:var(--brand);width:0%;transition:width .2s}
+input,select{border:1px solid var(--line);background:white;border-radius:11px;padding:11px 12px;color:var(--ink);min-width:0}input{width:100%}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row input{flex:1}.question{font-size:20px;font-weight:800;margin:18px 0}.choices{display:grid;gap:9px;margin-top:12px}.choices button{text-align:left;background:white;border:1px solid var(--line);color:var(--ink);line-height:1.4}.choices button.correct{border-color:#16a34a;background:#f0fdf4}.choices button.wrong{border-color:#dc2626;background:#fef2f2}.feedback{min-height:26px;font-weight:750;margin-top:12px}.list{display:grid;gap:9px;margin-top:15px}.item{border:1px solid var(--line);border-radius:13px;padding:13px}.item strong{display:block;margin-bottom:4px}.item .muted{font-size:14px}.small{font-size:12px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:25px 0}.notice{padding:12px;background:#fffbeb;border:1px solid #fde68a;color:#854d0e;border-radius:12px;line-height:1.5}
+@media(max-width:740px){.grid{grid-template-columns:1fr}.card{padding:18px}.big{font-size:29px}.tab{flex:1}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="top"><div class="brand">✦ SpeakEasy</div><span class="chip">FREE ENGLISH PRACTICE</span></div>
+<h1>Build your English,<br>one day at a time.</h1>
+<p>Learn useful vocabulary, practice everyday conversations, test your grammar, and track your progress — at your own pace.</p>
+</div></header>
+<main>
+<nav class="tabs" aria-label="Learning sections">
+<button class="tab active" data-tab="home">Home</button><button class="tab" data-tab="vocab">Vocabulary</button><button class="tab" data-tab="speaking">Speaking Q&A</button><button class="tab" data-tab="quiz">Grammar Quiz</button><button class="tab" data-tab="progress">My Progress</button>
+</nav>
+<section id="home" class="grid">
+<div class="card"><span class="eyebrow">YOUR DAILY PRACTICE</span><h2 style="margin-top:12px">Welcome to SpeakEasy!</h2><p class="muted">A little practice every day can help you become more confident. Choose a section to begin.</p>
+<div class="list">
+<div class="item"><strong>📘 Vocabulary</strong><div class="muted">100 everyday words with definitions and example sentences.</div><div class="actions"><button class="primary" data-go="vocab">Learn words →</button></div></div>
+<div class="item"><strong>💬 Speaking Q&A</strong><div class="muted">30 practical questions and sample answers to practice aloud.</div><div class="actions"><button class="primary" data-go="speaking">Practice speaking →</button></div></div>
+<div class="item"><strong>✅ Grammar Quiz</strong><div class="muted">30 multiple-choice questions with instant feedback.</div><div class="actions"><button class="primary" data-go="quiz">Start quiz →</button></div></div>
+</div></div>
+<aside class="card"><span class="eyebrow">YOUR JOURNEY</span><h2 style="margin-top:12px">Progress summary</h2><div class="stats"><div class="stat"><div class="num" id="statWords">0</div><div class="muted">Words learned</div></div><div class="stat"><div class="num" id="statQuiz">0</div><div class="muted">Quiz correct</div></div><div class="stat"><div class="num" id="statAnswers">0</div><div class="muted">Speaking practices</div></div><div class="stat"><div class="num" id="statBest">0%</div><div class="muted">Quiz accuracy</div></div></div><p class="muted" style="margin-top:18px"><strong>Daily goal: 5 words</strong></p><div class="progress"><div class="bar" id="dailyBar"></div></div><div class="muted small" id="dailyText">0 of 5 words learned</div><p class="muted small">Progress saves in this browser on this device.</p></aside>
+</section>
+<section id="vocab" class="grid hide">
+<div class="card"><span class="eyebrow">VOCABULARY BUILDER</span><h2 style="margin-top:12px">Learn a useful word</h2><div class="row"><select id="wordCategory"><option value="all">All words</option><option value="daily">Daily life</option><option value="feelings">Feelings</option><option value="study">Study & work</option><option value="travel">Travel</option></select><input id="wordSearch" placeholder="Search words..." aria-label="Search vocabulary"></div>
+<div class="big" id="word">Improve</div><div class="meaning muted" id="meaning">to make something better</div><div class="example"><strong>Example sentence</strong><br><span id="example">I want to improve my English every day.</span></div><div class="muted" id="wordCount"></div>
+<div class="actions"><button class="primary" id="learnBtn">✓ I learned it</button><button id="speakWord">🔊 Hear word</button><button id="prevWord">← Previous</button><button id="nextWord">Next →</button></div><p class="muted small">Tip: say the word and example sentence out loud.</p></div>
+<aside class="card"><span class="eyebrow">QUICK REVIEW</span><h2 style="margin-top:12px">Words learned</h2><div class="num" id="vocabCount">0</div><p class="muted">Mark a word as learned when you can understand it and use it in a sentence.</p><div class="progress"><div class="bar" id="vocabBar"></div></div><div class="muted small" id="vocabGoal">0 / 10 words in this starter set</div><div class="notice" style="margin-top:18px">This is a beginner-friendly starter vocabulary. You can add more words by editing the HTML file.</div></aside>
+</section>
+<section id="speaking" class="grid hide">
+<div class="card"><span class="eyebrow">SPEAKING PRACTICE</span><h2 style="margin-top:12px">Question and answer</h2><p class="muted">Read the question aloud, listen to the sample answer, then write and say your own answer.</p>
+<div class="example"><div class="muted small" id="sNumber">Question 1</div><div class="question" id="sQuestion">What do you do every morning?</div><strong>Sample answer</strong><p id="sAnswer" style="line-height:1.6;margin-bottom:0">I wake up, brush my teeth, and get ready for the day.</p></div>
+<div class="actions"><button id="hearQuestion">🔊 Hear question</button><button id="hearAnswer">🔊 Hear answer</button></div><label for="myAnswer"><strong>Your answer</strong></label><input id="myAnswer" placeholder="Write your answer in English..."><div class="actions"><button class="primary" id="saveAnswer">Save practice</button><button id="prevSpeaking">← Previous</button><button id="nextSpeaking">Next question →</button></div><p class="muted" id="savedMsg" aria-live="polite"></p></div>
+<aside class="card"><span class="eyebrow">SPEAKING TIP</span><h2 style="margin-top:12px">Speak out loud</h2><p class="muted">You do not need a perfect answer. Start with one simple sentence, then add more details.</p><div class="example"><strong>Question:</strong> Why are you learning English?<br><br><strong>Short answer:</strong> I am learning English to communicate with more people.<br><br><strong>Longer answer:</strong> I am learning English because I want to travel and learn about different cultures.</div><div class="num" id="speakingCount">0</div><div class="muted">Practices saved</div></aside>
+</section>
+<section id="quiz" class="grid hide">
+<div class="card"><span class="eyebrow">GRAMMAR QUIZ</span><h2 style="margin-top:12px">Choose the best answer</h2><div class="row"><span class="muted" id="quizNumber">Question 1 of 30</span><span style="flex:1"></span><button id="restartQuiz">Restart quiz</button></div><div class="question" id="qText"></div><div class="choices" id="choices"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="actions"><button class="primary" id="nextQuiz">Next question →</button></div></div>
+<aside class="card"><span class="eyebrow">QUIZ SCORE</span><h2 style="margin-top:12px">Keep learning</h2><div class="stats"><div class="stat"><div class="num" id="sessionScore">0</div><div class="muted">Correct this session</div></div><div class="stat"><div class="num" id="sessionDone">0</div><div class="muted">Answered</div></div></div><p class="muted">Read the feedback after each answer. If you make a mistake, try to understand why the correct option works.</p></aside>
+</section>
+<section id="progress" class="grid hide">
+<div class="card"><span class="eyebrow">YOUR LEARNING</span><h2 style="margin-top:12px">Progress summary</h2><div class="stats"><div class="stat"><div class="num" id="pWords">0</div><div class="muted">Words learned</div></div><div class="stat"><div class="num" id="pQuiz">0</div><div class="muted">Correct quiz answers</div></div><div class="stat"><div class="num" id="pAnswers">0</div><div class="muted">Speaking practices saved</div></div><div class="stat"><div class="num" id="pAccuracy">0%</div><div class="muted">Quiz accuracy</div></div></div><div class="actions"><button id="resetProgress">Reset saved progress</button></div><p class="muted small" id="resetMsg"></p></div>
+<aside class="card"><span class="eyebrow">STUDY ROUTINE</span><h2 style="margin-top:12px">A simple 15-minute plan</h2><div class="list"><div class="item"><strong>5 minutes — Vocabulary</strong><div class="muted">Learn 5 words and say each in a sentence.</div></div><div class="item"><strong>5 minutes — Speaking</strong><div class="muted">Answer 3 questions aloud.</div></div><div class="item"><strong>5 minutes — Grammar</strong><div class="muted">Complete a few quiz questions and review mistakes.</div></div></div></aside>
+</section>
+<div class="footer">SpeakEasy English Learning • Free starter app • Practice a little every day</div>
+</main>
+<script>
+const words=[
+["Improve","to make something better","I want to improve my English every day.","study"],
+["Confident","believing that you can do something","I feel more confident when I practice speaking.","feelings"],
+["Usually","in most situations; most of the time","I usually study English in the evening.","daily"],
+["Opportunity","a chance to do something","Learning English can create new opportunities.","study"],
+["Practice","to do something repeatedly to get better","I practice speaking for ten minutes every day.","study"],
+["Curious","wanting to learn or know more","I am curious about other countries and cultures.","feelings"],
+["Explain","to make something clear or easy to understand","Can you explain this word to me?","study"],
+["Goal","something you want to achieve","My goal is to speak English clearly.","study"],
+["Habit","something you do regularly","Reading every day is a useful habit.","daily"],
+["Progress","improvement over time","I can see my progress when I practice regularly.","study"],
+["Friendly","kind and pleasant to other people","My new classmate is friendly.","feelings"],
+["Tired","needing rest or sleep","I feel tired after a long day.","feelings"],
+["Excited","very happy and enthusiastic","I am excited about learning new things.","feelings"],
+["Worried","thinking that something bad may happen","I feel worried before an important exam.","feelings"],
+["Relax","to rest and become calm","I listen to music to relax.","daily"],
+["Choose","to decide which thing you want","I choose one new word to learn each day.","daily"],
+["Remember","to keep something in your mind","I try to remember new English words.","study"],
+["Forget","to be unable to remember something","I sometimes forget difficult words.","study"],
+["Useful","helpful for a purpose","This is a useful English expression.","daily"],
+["Enough","as much as is needed","I have enough time to practice today.","daily"],
+["Journey","travel from one place to another","Learning a language is a long journey.","travel"],
+["Explore","to travel around or learn about something","I want to explore new places.","travel"],
+["Culture","the customs and way of life of a group","I enjoy learning about another culture.","travel"],
+["Ticket","a document that lets you travel or enter","I bought a bus ticket yesterday.","travel"],
+["Arrive","to reach a place","We will arrive at the station at noon.","travel"],
+["Borrow","to use something and return it later","May I borrow your pen?","daily"],
+["Lend","to give something temporarily to someone","Can you lend me your book?","daily"],
+["Improve","to make better","Reading aloud can improve pronunciation.","study"],
+["Decide","to make a choice","I need to decide what to study first.","daily"],
+["Prepare","to get ready for something","I prepare my books before class.","study"],
+["Patient","able to wait calmly","A good teacher is patient with learners.","feelings"],
+["Honest","truthful and not trying to deceive","It is important to be honest.","feelings"],
+["Polite","showing good manners and respect","Please be polite when asking for help.","daily"],
+["Busy","having a lot to do","I am busy with my studies today.","daily"],
+["Available","free to be used or able to meet","Are you available this afternoon?","daily"],
+["Improve","to become or make better","I want to improve my pronunciation.","study"],
+["Instead","as an alternative","I walked instead of taking a bus.","daily"],
+["Although","despite the fact that","Although I was tired, I finished my work.","study"],
+["Because","for the reason that","I practice because I want to speak clearly.","daily"],
+["Finally","after a long time or at the end","Finally, I understood the lesson.","daily"],
+["Careful","giving attention to avoid mistakes","Be careful when crossing the road.","daily"],
+["Healthy","in good health","Walking is a healthy habit.","daily"],
+["Advice","a suggestion about what someone should do","My teacher gave me useful advice.","study"],
+["Improve","to make progress in a skill","Daily reading can improve your vocabulary.","study"],
+["Schedule","a plan of times for activities","I made a study schedule for this week.","study"],
+["Destination","the place someone is going to","Dhaka is our next destination.","travel"],
+["Reservation","an arrangement to keep a place or service","We made a hotel reservation.","travel"],
+["Direction","information about which way to go","Could you give me directions to the station?","travel"],
+["Comfortable","making you feel relaxed","These shoes are comfortable for walking.","daily"],
+["Crowded","full of many people","The bus is crowded in the morning.","travel"],
+["Quiet","making little or no noise","I like studying in a quiet room.","daily"],
+["Improve","to make something better","You can improve by practicing every day.","study"],
+["Possible","able to happen or be done","Is it possible to finish this today?","daily"],
+["Necessary","needed or required","Water is necessary for life.","daily"],
+["Responsible","having a duty to take care of something","I am responsible for my homework.","study"],
+["Independent","able to do things without help","Learning skills can help me become independent.","study"],
+["Success","achieving a goal","Success takes time and effort.","study"],
+["Effort","physical or mental energy used to do something","Your effort will help you learn.","study"],
+["Challenge","something difficult that tests ability","Speaking English is a challenge for me.","feelings"],
+["Solution","an answer to a problem","We found a solution to the problem.","study"],
+["Improve","to develop a skill or quality","I want to improve my writing.","study"],
+["Communication","sharing information with others","Clear communication is important.","study"],
+["Conversation","a talk between two or more people","We had a short conversation in English.","daily"],
+["Pronunciation","the way a word is spoken","I practice the pronunciation of new words.","study"],
+["Fluent","able to speak a language smoothly","I hope to become fluent in English.","study"],
+["Meaning","what a word or sentence expresses","I looked up the meaning of the word.","study"],
+["Sentence","a group of words expressing a complete idea","Write one sentence with this word.","study"],
+["Question","something you ask to get information","I have a question about this lesson.","study"],
+["Answer","a response to a question","Please answer in a complete sentence.","study"],
+["Journey","the act of travelling from one place to another","Our journey took three hours.","travel"],
+["Passport","an official document for international travel","Keep your passport in a safe place.","travel"],
+["Airport","a place where aircraft take off and land","We reached the airport early.","travel"],
+["Luggage","bags and cases used while travelling","My luggage is beside the door.","travel"],
+["Nearby","not far away","Is there a pharmacy nearby?","travel"],
+["Across","from one side to the other","Walk across the street carefully.","travel"],
+["Return","to come or go back","I will return home in the evening.","travel"],
+["Invite","to ask someone to come somewhere","I will invite my friends to the event.","daily"],
+["Celebrate","to do something special for an occasion","We celebrate important family events.","daily"],
+["Recommend","to suggest something as good","Can you recommend a good book?","study"],
+["Compare","to look at similarities and differences","Compare the two sentences.","study"],
+["Describe","to say what something or someone is like","Please describe your hometown.","study"],
+["Continue","to keep doing something","I will continue learning English.","study"],
+["Complete","to finish doing something","I need to complete my homework.","study"],
+["Discover","to find something new or learn something","I want to discover new ideas.","study"],
+["Develop","to grow or improve over time","Reading helps develop language skills.","study"],
+["Achieve","to succeed in doing something","I want to achieve my goals.","study"],
+["Avoid","to stay away from something","Try to avoid common grammar mistakes.","study"],
+["Prefer","to like one thing more than another","I prefer tea to coffee.","daily"],
+["Available","ready to be used or obtained","The course is available online.","study"],
+["Patient","able to wait without becoming upset","Be patient with yourself as you learn.","feelings"],
+["Proud","feeling pleased about an achievement","I am proud of my progress.","feelings"],
+["Nervous","worried or anxious about something","I feel nervous when speaking to a group.","feelings"],
+["Calm","peaceful and not worried","Take a breath and stay calm.","feelings"],
+["Grateful","feeling thankful","I am grateful for your help.","feelings"],
+["Kind","caring and helpful","A kind word can make someone's day better.","feelings"],
+["Trust","to believe someone is honest or reliable","I trust my teacher's advice.","feelings"],
+["Support","to help someone or something","My family supports my studies.","feelings"],
+["Goal","something you want to achieve","Set a small goal for today.","study"],
+["Review","to study something again","I review new words before bed.","study"],
+["Repeat","to say or do something again","Please repeat the sentence slowly.","study"],
+["Mistake","something that is incorrect","A mistake can help you learn.","study"],
+["Improve","to make better","Keep practicing to improve your English.","study"]
+];
+const speaking=[
+["What is your name?","My name is Alex. It is nice to meet you."],
+["Where are you from?","I am from Bangladesh."],
+["What do you do every morning?","I wake up, brush my teeth, and get ready for the day."],
+["Why are you learning English?","I am learning English because I want to communicate with more people."],
+["What do you do in your free time?","In my free time, I like to learn new things and watch useful videos."],
+["What is your favourite food?","One of my favourite foods is rice with fish."],
+["What time do you wake up?","I usually wake up at seven in the morning."],
+["How do you practice English?","I learn new words, read examples, and practice speaking every day."],
+["What did you do yesterday?","Yesterday, I studied, helped at home, and relaxed in the evening."],
+["What are your goals?","My goal is to improve my English and learn useful computer skills."],
+["Where would you like to travel?","I would like to visit different countries and learn about their cultures."],
+["What makes you happy?","Learning something new and spending time with my family makes me happy."],
+["How was your day?","My day was good. I studied and learned something useful."],
+["What kind of music do you like?","I like calm music because it helps me relax."],
+["Can you describe your hometown?","My hometown is a place with familiar people, shops, and local markets."],
+["What are you studying?","I am studying science and improving my English."],
+["What do you usually eat for breakfast?","I usually eat a simple breakfast before starting my day."],
+["How do you stay organised?","I make a list of tasks and try to follow my daily routine."],
+["What is difficult about English?","Speaking quickly is difficult for me, so I practice one sentence at a time."],
+["What do you do when you make a mistake?","I check the mistake, learn the correct form, and try again."],
+["Do you prefer reading or watching videos?","I like both, but I use videos to hear how English is spoken."],
+["What did you learn this week?","I learned new vocabulary and practiced making questions in English."],
+["How can you help a friend?","I can listen to my friend and help with a task if I can."],
+["What is your favourite subject?","I enjoy science because it helps me understand the world."],
+["What will you do tomorrow?","Tomorrow, I will study and practice English for fifteen minutes."],
+["Why is practice important?","Practice helps me remember words and become more confident."],
+["What would you like to improve?","I would like to improve my speaking and pronunciation."],
+["How do you handle a busy day?","I choose the most important tasks and take short breaks."],
+["What makes a good friend?","A good friend is kind, honest, and supportive."],
+["What is one thing you are proud of?","I am proud that I keep learning and trying new things."]
+];
+const questions=[
+["She ___ to school every day.",["go","goes","going"],1,"With he, she, or it in the present simple, use the verb with -s or -es."],
+["I ___ learning English now.",["am","is","are"],0,"Use am with I."],
+["What is the past form of “go”?",["goed","gone","went"],2,"The simple past of go is went."],
+["They ___ happy today.",["is","am","are"],2,"Use are with they."],
+["He has ___ apple.",["a","an","the a"],1,"Use an before a vowel sound, as in apple."],
+["___ do you live?",["Where","Who","Which"],0,"Where asks about a place."],
+["I have lived here ___ 2020.",["for","since","at"],1,"Use since with a starting point in time."],
+["The opposite of “easy” is ___.",["simple","difficult","early"],1,"Difficult is the opposite of easy."],
+["We ___ football yesterday.",["play","played","plays"],1,"Use the past form played for yesterday."],
+["She is taller ___ her brother.",["then","than","that"],1,"Use than to compare."],
+["There ___ two books on the table.",["is","are","am"],1,"Use are with a plural noun."],
+["I ___ never been to London.",["has","have","having"],1,"Use have with I."],
+["He doesn't ___ coffee.",["likes","like","liking"],1,"After doesn't, use the base verb."],
+["Listen! The baby ___.",["cries","is crying","cry"],1,"Use present continuous for an action happening now."],
+["If it rains, we ___ at home.",["stay","will stay","stayed"],1,"A common first conditional uses will in the result clause."],
+["I am interested ___ science.",["in","on","at"],0,"The phrase is interested in."],
+["She can ___ very well.",["sings","sing","singing"],1,"Use the base verb after can."],
+["This is the ___ film I have ever seen.",["better","best","good"],1,"Use the superlative best when comparing with all."],
+["Please speak ___. I can't hear you.",["loud","more loudly","loudest"],1,"More loudly is the suitable adverbial comparison here."],
+["I was tired, ___ I finished my homework.",["but","because","or"],0,"But shows contrast."],
+["How ___ water do you drink?",["many","much","few"],1,"Water is uncountable, so use much."],
+["There isn't ___ milk left.",["some","any","many"],1,"Any is common in negative sentences."],
+["My brother and I ___ students.",["is","am","are"],2,"A compound subject with and takes are here."],
+["She has been studying ___ two hours.",["since","for","at"],1,"Use for with a duration."],
+["I enjoy ___ books.",["read","reading","to reading"],1,"Enjoy is followed by a gerund (-ing form)."],
+["The letter ___ by Sara yesterday.",["wrote","was written","is write"],1,"Passive voice in the past: was/were + past participle."],
+["Could you ___ me the way?",["tell","say","speak"],0,"The natural phrase is tell me the way."],
+["He is good ___ mathematics.",["in","at","on"],1,"The usual phrase is good at."],
+["I have two ___.",["childs","children","childrens"],1,"Children is the plural of child."],
+["By next year, I ___ my course.",["finish","finished","will have finished"],2,"Future perfect describes completion before a future time."]
+];
+let learned=new Set(JSON.parse(localStorage.getItem("se2_learned")||"[]"));
+let quizTotal=Number(localStorage.getItem("se2_qtotal")||0),quizCorrect=Number(localStorage.getItem("se2_qcorrect")||0);
+let savedAnswers=JSON.parse(localStorage.getItem("se2_answers")||"{}");
+let wordIndex=0,speakIndex=0,quizIndex=0,answered=false,sessionCorrect=0,sessionDone=0,filtered=[];
+const $=id=>document.getElementById(id);
+function goTab(id){document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("active",b.dataset.tab===id));["home","vocab","speaking","quiz","progress"].forEach(x=>$(x).classList.toggle("hide",x!==id));}
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>goTab(b.dataset.tab));
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>goTab(b.dataset.go));
+function speak(text){if(!("speechSynthesis" in window)){alert("Text-to-speech is not supported in this browser.");return;}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.86;speechSynthesis.speak(u);}
+function updateStats(){let acc=quizTotal?Math.round(quizCorrect/quizTotal*100):0;["statWords","pWords","vocabCount"].forEach(id=>$(id).textContent=learned.size);["statQuiz","pQuiz"].forEach(id=>$(id).textContent=quizCorrect);["statAnswers","pAnswers","speakingCount"].forEach(id=>$(id).textContent=Object.keys(savedAnswers).length);["statBest","pAccuracy"].forEach(id=>$(id).textContent=acc+"%");$("dailyBar").style.width=Math.min(100,learned.size/5*100)+"%";$("dailyText").textContent=Math.min(learned.size,5)+" of 5 words learned";$("vocabBar").style.width=Math.min(100,learned.size/10*100)+"%";$("vocabGoal").textContent=Math.min(learned.size,10)+" / 10 words in this starter set";$("sessionScore").textContent=sessionCorrect;$("sessionDone").textContent=sessionDone;}
+function applyWordFilter(){let q=$("wordSearch").value.trim().toLowerCase(),cat=$("wordCategory").value;filtered=words.map((w,i)=>({...{w:w[0],m:w[1],e:w[2],cat:w[3]},i})).filter(x=>(cat==="all"||x.cat===cat)&&(!q||(x.w+" "+x.m+" "+x.e).toLowerCase().includes(q)));if(!filtered.length){$("word").textContent="No matching words";$("meaning").textContent="Try another search or category.";$("example").textContent="";$("wordCount").textContent="0 words found";$("learnBtn").disabled=true;return;}$("learnBtn").disabled=false;if(wordIndex>=filtered.length)wordIndex=0;renderWord();}
+function renderWord(){if(!filtered.length)applyWordFilter();if(!filtered.length)return;let x=filtered[wordIndex%filtered.length];$("word").textContent=x.w;$("meaning").textContent=x.m;$("example").textContent=x.e;$("wordCount").textContent="Word "+(wordIndex+1)+" of "+filtered.length;$("learnBtn").textContent=learned.has(x.i)?"✓ Learned":"✓ I learned it";}
+$("wordSearch").addEventListener("input",()=>{wordIndex=0;applyWordFilter()});$("wordCategory").onchange=()=>{wordIndex=0;applyWordFilter()};$("learnBtn").onclick=()=>{if(!filtered.length)return;learned.add(filtered[wordIndex].i);localStorage.setItem("se2_learned",JSON.stringify([...learned]));renderWord();updateStats();};$("nextWord").onclick=()=>{if(filtered.length){wordIndex=(wordIndex+1)%filtered.length;renderWord()}};$("prevWord").onclick=()=>{if(filtered.length){wordIndex=(wordIndex-1+filtered.length)%filtered.length;renderWord()}};$("speakWord").onclick=()=>{if(filtered.length)speak(filtered[wordIndex].w+". "+filtered[wordIndex].e)};
+function renderSpeaking(){let x=speaking[speakIndex%speaking.length];$("sNumber").textContent="Question "+(speakIndex+1)+" of "+speaking.length;$("sQuestion").textContent=x[0];$("sAnswer").textContent=x[1];$("myAnswer").value=savedAnswers[speakIndex]||"";$("savedMsg").textContent="";}
+$("hearQuestion").onclick=()=>speak(speaking[speakIndex][0]);$("hearAnswer").onclick=()=>speak(speaking[speakIndex][1]);$("prevSpeaking").onclick=()=>{speakIndex=(speakIndex-1+speaking.length)%speaking.length;renderSpeaking()};$("nextSpeaking").onclick=()=>{speakIndex=(speakIndex+1)%speaking.length;renderSpeaking()};$("saveAnswer").onclick=()=>{let val=$("myAnswer").value.trim();if(!val){$("savedMsg").textContent="Write your answer first, then save your practice.";return;}savedAnswers[speakIndex]=val;localStorage.setItem("se2_answers",JSON.stringify(savedAnswers));$("savedMsg").textContent="Practice saved! Now say your answer aloud.";updateStats();};
+function renderQuiz(){answered=false;let x=questions[quizIndex];$("quizNumber").textContent="Question "+(quizIndex+1)+" of "+questions.length;$("qText").textContent=x[0];$("feedback").textContent="";$("choices").innerHTML="";x[1].forEach((a,i)=>{let b=document.createElement("button");b.textContent=String.fromCharCode(65+i)+". "+a;b.onclick=()=>{if(answered)return;answered=true;sessionDone++;quizTotal++;if(i===x[2]){sessionCorrect++;quizCorrect++;b.classList.add("correct");$("feedback").textContent="Correct! "+x[3];}else{b.classList.add("wrong");$("choices").children[x[2]].classList.add("correct");$("feedback").textContent="Not quite. Correct answer: "+x[1][x[2]]+". "+x[3];}localStorage.setItem("se2_qtotal",quizTotal);localStorage.setItem("se2_qcorrect",quizCorrect);updateStats();};$("choices").appendChild(b)});}
+$("nextQuiz").onclick=()=>{quizIndex=(quizIndex+1)%questions.length;renderQuiz()};$("restartQuiz").onclick=()=>{quizIndex=0;sessionCorrect=0;sessionDone=0;renderQuiz();updateStats()};$("resetProgress").onclick=()=>{if(confirm("Reset all SpeakEasy progress saved in this browser?")){learned=new Set();quizTotal=0;quizCorrect=0;savedAnswers={};localStorage.removeItem("se2_learned");localStorage.removeItem("se2_qtotal");localStorage.removeItem("se2_qcorrect");localStorage.removeItem("se2_answers");updateStats();renderWord();renderSpeaking();$("resetMsg").textContent="Your saved progress has been reset.";}};applyWordFilter();renderSpeaking();renderQuiz();updateStats();
+</script>
+</body></html>
